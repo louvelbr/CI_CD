@@ -55,7 +55,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: src
           destination: ./_site
       - name: TEST après build jekyll
         run: ls _site/ -la
