@@ -52,6 +52,8 @@ jobs:
         run: pwd
       - name: TEST
         run: ls -la
+      - name: Deploi
+        run: npm run deploy
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
@@ -77,4 +79,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         #uses: actions/deploy-pages@v1
-        run: npm run deploy
+        
