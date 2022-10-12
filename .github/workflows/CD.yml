@@ -46,6 +46,12 @@ jobs:
         run: pwd
       - name: TEST
         run: ls -la
+      - name: cd
+        run: cd src
+      - name: pwd
+        run: pwd
+      - name: TEST
+        run: ls -la
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
