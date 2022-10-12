@@ -42,6 +42,8 @@ jobs:
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v2
+      - name: pwd
+        run: pwd
       - name: TEST
         run: ls -la
       - name: Build with Jekyll
@@ -50,7 +52,7 @@ jobs:
           source: ./
           destination: ./_site
       - name: TEST après build jekyll
-        run: ls -la
+        run: ls _site/ -la
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
