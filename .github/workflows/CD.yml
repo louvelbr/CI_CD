@@ -47,8 +47,10 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: dist/ci-cd
+          source: ./
           destination: ./_site
+      - name: TEST après build jekyll
+        run: ls -la
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
