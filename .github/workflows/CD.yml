@@ -66,17 +66,4 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-      #url: https://louvelbr.github.io/CI_CD/src/app/app.component.html
-    runs-on: ubuntu-latest
-    needs: build
-    #if: github.event.pull_request.merged == true
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        #uses: actions/deploy-pages@v1
         
